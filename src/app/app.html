@@ -1,1 +1,27 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="content" id="sidemenu">
+  <ion-header>
+    <ion-toolbar>
+      <img [src]="userimg" (error)="errorHandler($event)">
+      <p class="title">Sample user</p>
+      <p class="info">Norway</p>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item menuClose icon-left (click)="openPage('HomePage')">
+        <ion-icon item-start name="ios-home-outline"></ion-icon>
+        Home
+      </ion-item>
+      <ion-item menuClose icon-left (click)="openPage('BlogPage')">
+        <ion-icon item-start name="ios-paper-outline"></ion-icon>
+        Blog
+      </ion-item>
+      <ion-item menuClose icon-left detail-none>
+        <ion-icon item-start name="ios-log-out-outline"></ion-icon>
+        Close Menu
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav id="nav" #content [root]="rootPage" swipeBackEnable="false"></ion-nav>

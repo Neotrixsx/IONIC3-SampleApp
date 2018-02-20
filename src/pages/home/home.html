@@ -1,14 +1,46 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar class="navbar-background">
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle>
+         <ion-icon name="menu"></ion-icon>
+       </button>
+    </ion-buttons>
     <ion-title>
-      Ionic Blank
+      Fat To Fit
     </ion-title>
+    <ion-buttons ion-button icon-only right>
+      <button ion-button (tap)="share('whatsapp')">
+        <ion-icon name="logo-whatsapp"></ion-icon>
+      </button>
+      <button ion-button (tap)="share('fb')">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </button>
+      <button ion-button (tap)="share('share')">
+        <ion-icon name="share"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content class="card-background-page">
+  <ion-card (click)="locationjump('SlideBurnbellyfatPage')">
+    <img src="assets/img/homeimg/belly.png" />
+    <div class="card-title">Burn Belly Fat</div>
+  </ion-card>
+  <ion-card (click)="locationjump('SlideEasywaytoburnPage')">
+    <img src="assets/img/homeimg/easy.png" />
+    <div class="card-title">Easy Way To Burn Fat</div>
+  </ion-card>
+  <ion-card (click)="locationjump('SlideFattofittipsPage')">
+    <img src="assets/img/homeimg/amain.png" />
+    <div class="card-title">Fat TO Fit Tips</div>
+  </ion-card>
+  <ion-card (click)="locationjump('SlideRighttoeatPage')">
+    <img src="assets/img/homeimg/eattime.png" />
+    <div class="card-title">Best Time To Eat</div>
+  </ion-card>
+  <ion-card (click)="locationjump('SlideBurnfatfastPage')">
+    <img src="assets/img/homeimg/fast.png" />
+    <div class="card-title">Burn Fat Fast</div>
+  </ion-card>
 </ion-content>

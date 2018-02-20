@@ -38,7 +38,18 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  primary-color-dark:   #1976D2,
+  primary-color:        #2196F3,
+  primary-color-light:  #BBDEFB,
+  primary-color-text:   #FFFFFF,
+  accent-color:         #7C4DFF,
+  primary-text-color:   #212121,
+  secondary-text-color: #757575,
+  divider-color:        #BDBDBD,
+  clrwhite: #ffffff,
+  clrblack: #000000
+  
 );
 
 
@@ -53,6 +64,7 @@ $colors: (
 // --------------------------------------------------
 // Material Design only Sass variables can go here
 
+$menu-width: 250px;
 
 
 
@@ -85,4 +97,16 @@ $colors: (
 // --------------------------------------------------
 
 @import "roboto";
-@import "noto-sans";
+
+//Custom Mixin
+// --------------------------------------------------
+@import "globalmixins";
+
+
+//Custom Scss
+// --------------------------------------------------
+@import "globle";
+
+// Custom SCSS Files
+// --------------------------------------------------
+

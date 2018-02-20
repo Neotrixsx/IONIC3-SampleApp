@@ -14,3 +14,122 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+body {
+    font-family: Roboto;
+    font-weight: 300;
+    background: $body-bg;
+    @include font-size();
+    color: $text-color;
+    word-wrap: break-word;
+    line-height: 1.42857;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  button {
+    font-family: Roboto;
+    font-weight: 300;
+  }
+  
+  // Golobal custom
+  // .item-md {
+  //   //for input last ckild
+  //   // @include padding-all(null, null, null, 0);
+  // }
+
+  .toolbar-background {
+    background: linear-gradient(to right, #2196f3 1%,#7c4dff 75%);  // Application Base Change
+  }
+
+  .toolbar-title-md {
+    //For header title
+    font-weight: 300;
+    color: #fff;
+  }
+  
+  .bar-button-default-md {
+    color: #fff;
+  }
+  
+  .card-title {
+    font-weight: 300 !important;
+    color: #212121 !important;
+    background: rgba(255, 255, 255, 0.56);
+  }
+  
+ 
+  
+  // Menu css
+  #sidemenu {
+    ion-toolbar {
+      height: 140px;
+      .toolbar-content {
+        @include padding-all(5px, 5px, 5px, 5px);
+      }
+      img {
+        border-radius: 50%;
+        width: 50px;
+      }
+      p {
+        color: #fff;
+        @include margin-all(5px !important, null, 5px !important, null);
+        &.title {
+          font-size: 18px;
+        }
+        &.info {
+          font-size: 12px;
+        }
+      }
+    }
+    .toolbar-background {
+      background-image: url('../assets/img/menu-bg.png');
+    }
+    
+    ion-content {
+      background: linear-gradient(135deg, #2196f3 1%,#7c4dff 52%); // Application Base Change
+      .item {
+        color: #fff;
+        background-color: transparent;
+        font-weight: 300;
+        .item-inner{
+          margin-left: 0px;
+        }
+      }
+    }
+  }
+
+// My Classess
+  .content-custom-bg{
+    background: #f7f7f7;
+  }
+
+  .white-text{
+    color: color($colors, clrwhite);
+  }
+  .black-text{
+    color: color($colors, clrblack);
+  }
+
+  // slide section
+ion-slides {
+  .slide-zoom {
+    height: 100%;
+  }
+  .slide-card {
+    height: calc(100% - 20px);
+  }
+  .tipsinfo {
+    @include padding-all(100px, null, null, null);
+    font-size: 16px;
+  }
+  .pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 45%;
+  }
+}

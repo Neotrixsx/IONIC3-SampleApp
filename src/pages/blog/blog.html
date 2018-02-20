@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Blog</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+  <ion-list>
+    <ion-item *ngFor="let item of newsData; let i = index" (click)="itemSelected(i)">
+      <ion-row>
+        <ion-col col-2>
+          <img src="assets/img/diet.jpg">
+          <!-- <img src="{{item.postimage}}"> -->
+        </ion-col>
+        <ion-col col-9>
+          <p class="datetime">{{item.posttime}}</p>
+          <h2>{{item.posttitle}}</h2>
+          <p>{{item.postdetail}}</p>
+          <p class="publisher">{{item.postpublishername}}</p>
+        </ion-col>
+        <ion-col col-1>
+          <ion-icon class="arrow-right" name="ios-arrow-forward-outline"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,219 @@
+//Custom Variables
+
+//** Background color for `<body>`.
+$body-bg:                 #f4f4f4 !default;
+//** Global text color on `<body>`.
+//$text-color:            $gray-dark !default;
+$text-color:              #000 !default;
+
+//** Global textual link color.
+//$link-color:            $brand-primary !default;
+$link-color:              #00a5ff !default;
+//** Link hover color set via `darken()` function.
+//$link-hover-color:      darken($link-color, 15%) !default;
+$link-hover-color:      darken($link-color, 15%) !default;
+
+$white-bg:#fff;
+
+
+// Global styles
+.no-border-radius { @include border-radius(0px !important); }
+.makebold { font-weight:bold; }
+.notbold { font-weight:normal; }
+.inline-element { display:inline-block;}
+
+.text-ten { font-size: 10px !important; }
+.text-eleven { font-size: 11px !important; }
+.text-twelve { font-size: 12px !important; }
+.text-fourteen { font-size: 14px !important; }
+.text-sixteen { font-size: 16px !important; }
+.text-eighteen { font-size: 18px !important; }
+.text-twenty { font-size: 20px !important; }
+.text-twentytwo { font-size: 22px !important; }
+.text-twentyfour { font-size: 24px !important; }
+.text-twentysix { font-size: 26px !important; }
+.text-twentyeight { font-size: 28px !important; }
+.text-thirty { font-size: 30px !important; }
+.text-fifty { font-size: 50px !important; }
+.text-sixty { font-size: 60px !important; }
+
+
+.nomargin {
+	@include margin-all(0 !important, 0 !important, 0 !important, 0 !important);
+}
+.no-top-margin {
+	@include margin-all(0px !important, null, null, null);
+}
+.no-right-margin {
+	@include margin-all(null, 0px !important, null, null);
+}
+.no-btm-margin {
+	@include margin-all(null, null, 0px !important, null);
+}
+.no-left-margin {
+	@include margin-all(null, null, null, 0px !important);
+}
+
+.mtb-twenty { @include margin-all(20px, null, 20px, null); }
+.mtb-thirty { @include margin-all(30px, null, 30px, null); }
+.mtb-forty { @include margin-all(40px, null, 40px, null); }
+
+.mt-five { @include margin-all(5px !important, null, null, null); }
+.mt-ten { @include margin-all(10px !important, null, null, null); }
+.mt-fifteen { @include margin-all(15px !important, null, null, null); }
+.mt-twenty { @include margin-all(20px !important, null, null, null); }
+
+.mr-five { @include margin-all(null, 5px !important, null, null); }
+.mr-ten { @include margin-all(null, 10px !important, null, null); }
+.mr-fifteen { @include margin-all(null, 15px !important, null, null); }
+
+.mb-five { @include margin-all(null, null, 5px !important, null); }
+.mb-ten { @include margin-all(null, null, 10px !important, null); }
+.mb-fifteen { @include margin-all(null, null, 15px !important, null); }
+.mb-twenty { @include margin-all(null, null, 20px !important, null); }
+.mb-thirty { @include margin-all(null, null, 30px !important, null); }
+.mb-forty { @include margin-all(null, null, 40px !important, null); }
+
+.ml-five { @include margin-all(null, null, null, 5px !important); }
+.ml-ten { @include margin-all(null, null, null, 10px !important); }
+.ml-fifteen { @include margin-all(null, null, null, 15px !important); }
+
+.nopadding {
+	@include padding-all(0, 0, 0, 0);
+}
+.no-top-padding {
+	@include padding-all(0, null, null, null);
+}
+.no-right-padding {
+	@include padding-all(null, 0 !important, null, null);
+}
+.no-btm-padding {
+	@include padding-all(null, null, 0, null);
+}
+.no-left-padding {
+	@include padding-all(null, null, null, 0 !important);
+}
+
+.pd-five {
+	@include padding-all(5px, 5px, 5px, 5px);
+}
+.pd-ten {
+	@include padding-all(10px, 10px, 10px, 10px);
+}
+.pd-fifteen {
+	@include padding-all(15px, 15px, 15px, 15px);
+}
+
+.ptb-five {
+	@include padding-all(5px, null, 5px, null);
+}
+.ptb-eight {
+	@include padding-all(8px, null, 8px, null);
+}
+.ptb-ten {
+	@include padding-all(10px, null, 10px, null);
+}
+.ptb-fifteen {
+	@include padding-all(15px, null, 15px, null);
+}
+
+.plr-five {
+	@include padding-all(null, 5px, null, 5px);
+}
+.plr-ten {
+	@include padding-all(null, 10px, null, 10px);
+}
+.plr-fifteen {
+	@include padding-all(null, 15px, null, 15px);
+}
+
+.pt-five { @include padding-all(5px, null, null, null); }
+.pt-eight { @include padding-all(8px, null, null, null); }
+.pt-ten { @include padding-all(10px, null, null, null); }
+.pt-fifteen { @include padding-all(15px, null, null, null); }
+.pt-twenty { @include padding-all(20px, null, null, null); }
+
+.pr-five { @include padding-all(null, 5px, null, null); }
+.pr-ten { @include padding-all(null, 10px, null, null); }
+.pr-fifteen { @include padding-all(null, 15px, null, null); }
+
+.pb-five { @include padding-all(null, null, 5px, null); }
+.pb-ten { @include padding-all(null, null, 10px, null); }
+.pb-fifteen { @include padding-all(null, null, 15px, null); }
+.pb-twenty { @include padding-all(null, null, 20px, null); }
+.pb-thirty { @include padding-all(null, null, 30px, null); }
+
+.pl-five { @include padding-all(null, null, null, 5px); }
+.pl-ten { @include padding-all(null, null, null, 10px); }
+.pl-fifteen { @include padding-all(null, null, null, 15px); }
+
+.white-bg {
+	background: $white-bg;
+}
+
+
+.fl{
+    float: left;
+}
+.fr{
+    float: right
+}
+
+.fw-200 { font-weight: 200; }
+.fw-300 { font-weight: 300; }
+.fw-400 { font-weight: 400; }
+.fw-500 { font-weight: 500; }
+.fw-600 { font-weight: 600; }
+.fw-700 { font-weight: 700; }
+.fw-800 { font-weight: 800; }
+
+.fullwidth{
+  width:100%;
+}
+
+
+
+.text-align-center{
+    text-align: center;
+}
+
+.text-align-right{
+    text-align: right;
+}
+
+.text-align-left{
+    text-align: left;
+}
+
+
+// * z-depth-shadow
+// *********************** 
+// */
+
+.z-depth-normal {
+   @include z-depth-normal( 0px, 2px, 4px, 0px, 0, 0, 0, 0.1);
+}
+
+.z-depth-1 {
+   @include z-depth( 0px, 2px, 2px, 0px, 0, 0, 0, 0.14, 0px, 1px, 5px, 0px, 0, 0, 0, 0.12, 0px, 3px, 1px, -2px, 0, 0, 0, 0.2);
+}
+
+.z-depth-1-half{
+   @include z-depth(0px, 3px, 3px, 0px, 0, 0, 0, 0.14, 0px, 1px, 7px, 0px, 0, 0, 0, 0.12, 0px, 3px, 1px, -1px, 0, 0, 0, 0.2);
+}
+
+.z-depth-2 {
+   @include z-depth( 0px, 4px, 5px, 0px, 0, 0, 0, 0.14, 0px, 1px, 10px, 0px, 0, 0, 0, 0.12, 0px, 2px, 4px, -1px, 0, 0, 0, 0.3);
+}
+
+.z-depth-3 {
+   @include z-depth( 0px, 6px, 10px, 0px, 0, 0, 0, 0.14, 0px, 1px, 18px, 0px, 0, 0, 0, 0.12, 0px, 3px, 5px, -1px, 0, 0, 0, 0.3);
+}
+
+.z-depth-4 {
+   @include z-depth( 0px, 8px, 10px, 1px, 0, 0, 0, 0.14, 0px, 3px, 14px, 2px, 0, 0, 0, 0.12, 0px, 5px, 5px, -3px, 0, 0, 0, 0.3);
+}
+
+.z-depth-5 {
+   @include z-depth( 0px, 16px, 24px, 2px, 0, 0, 0, 0.14, 0px, 6px, 30px, 5px, 0, 0, 0, 0.12, 0px, 8px, 10px, -5px, 0, 0, 0, 0.3);
+}
