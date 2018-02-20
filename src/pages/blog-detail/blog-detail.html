@@ -9,7 +9,7 @@
 <ion-content elastic-header *ngFor="let item of newsData">
 
   <!-- <div class="background-image" [ngStyle]="{'background-image': 'url("item.postimage")'}"></div> -->
-  <div class="background-image" [ngStyle]="{'background-image': 'url(https://ununsplash.imgix.net/photo-1421091242698-34f6ad7fc088?fit=crop&fm=jpg&h=650&q=75&w=950)'}"></div>
+  <div class="background-image" background-image="{{item.postimage}}"></div>
 
   <div class="main-content">
     <ion-row>
@@ -24,7 +24,7 @@
     <p>{{item.postdetail}}</p>
   </div>
 </ion-content>
-<ion-footer (click)="openPage(item.postlink)">
+<ion-footer (click)="openPage(postlink)">
   <ion-toolbar>
     <ion-title text-center>Read More</ion-title>
   </ion-toolbar>

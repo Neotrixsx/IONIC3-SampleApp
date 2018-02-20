@@ -13,6 +13,9 @@ export class BlogDetailPage {
   newsData;
   parameter;
   para;
+  postlink;
+  postimage;
+
   constructor(public navCtrl: NavController, public navParams: NavParams, private jsonProvider: JsonProvider, public common: CommonProvider, public network: Network) {
     this.parameter = navParams.get('param');
     this.getdata();
@@ -30,6 +33,10 @@ export class BlogDetailPage {
       .subscribe(
         data => {
           this.newsData = data.filter(item => item.postid === this.para + "");
+          this.postlink= this.newsData[0].postlink;
+          this.postimage= this.newsData[0].postimage;
+          console.log(this.postlink);
+          
           this.common.closeLoading();
           console.log("Success : " + this.newsData);
         },
