@@ -1,3 +1,4 @@
+import { DirectivesModule } from './../directives/directives.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -26,6 +27,7 @@ import { RestfulServicesProvider } from '../providers/restful-services/restful-s
     FormsModule,
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot(),
+    DirectivesModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

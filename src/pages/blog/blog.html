@@ -17,18 +17,21 @@
   <ion-list>
     <ion-item *ngFor="let item of newsData; let i = index" (click)="itemSelected(i)">
       <ion-row>
-        <ion-col col-2>
-          <img src="assets/img/diet.jpg">
-          <!-- <img src="{{item.postimage}}"> -->
+        <ion-col col-3 no-padding>
+          <img src="assets/img/no-photo-profile.jpg">
         </ion-col>
-        <ion-col col-9>
-          <p class="datetime">{{item.posttime}}</p>
-          <h2>{{item.posttitle}}</h2>
-          <p>{{item.postdetail}}</p>
-          <p class="publisher">{{item.postpublishername}}</p>
-        </ion-col>
-        <ion-col col-1>
-          <ion-icon class="arrow-right" name="ios-arrow-forward-outline"></ion-icon>
+        <ion-col no-padding padding-left>
+          <h2 text-wrap>{{item.posttitle }}</h2>
+          <hr/>
+          <p text-wrap>{{ item.postdetail | slice:0:178 }} {{item.postdetail > 175 ? '' : '...'}}</p>
+          <ion-row>
+            <ion-col>
+              <p class="datetime">{{item.posttime}}</p>
+            </ion-col>
+            <ion-col>
+              <p class="publisher">{{item.postpublishername}}</p>
+            </ion-col>
+          </ion-row>
         </ion-col>
       </ion-row>
     </ion-item>

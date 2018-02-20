@@ -1,3 +1,4 @@
+import { DirectivesModule } from './../../directives/directives.module';
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { BlogDetailPage } from './blog-detail';
@@ -8,6 +9,7 @@ import { BlogDetailPage } from './blog-detail';
   ],
   imports: [
     IonicPageModule.forChild(BlogDetailPage),
+    DirectivesModule
   ],
 })
 export class BlogDetailPageModule {}

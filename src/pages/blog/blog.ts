@@ -12,7 +12,7 @@ import { CommonProvider } from './../../providers/common/common';
 })
 export class BlogPage {
   newsData;
-  defaultImage : "assets/img/no_image.jpg";
+  defaultImage: "assets/img/no_image.jpg";
   constructor(public navCtrl: NavController, public navParams: NavParams, public common: CommonProvider, public jsonProvider: JsonProvider) {
     this.getdata();
   }
@@ -31,15 +31,16 @@ export class BlogPage {
       err => {
         this.common.closeLoading();
         console.error("Error : " + err);
-      },
-      () => {
-        this.common.closeLoading();
-        console.log('getData completed');
-      }
+      }//,
+      // () => {
+      //   this.common.closeLoading();
+      //   console.log('getData completed');
+      // }
     );
   }
 
   itemSelected(selected) {
+    console.log(selected);
     this.navCtrl.push("BlogDetailPage", {
       param: selected
     });
