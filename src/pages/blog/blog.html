@@ -18,7 +18,7 @@
     <ion-item *ngFor="let item of newsData; let i = index" (click)="itemSelected(i)">
       <ion-row>
         <ion-col col-3 no-padding>
-          <img src="assets/img/no-photo-profile.jpg">
+          <img src="{{item.postimage}}">
         </ion-col>
         <ion-col no-padding padding-left>
           <h2 text-wrap>{{item.posttitle }}</h2>

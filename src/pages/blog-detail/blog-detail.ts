@@ -1,12 +1,8 @@
+import { Network } from '@ionic-native/network';
+import { CommonProvider } from './../../providers/common/common';
+import { JsonProvider } from './../../providers/json/json';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the BlogDetailPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -14,12 +10,47 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'blog-detail.html',
 })
 export class BlogDetailPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  newsData;
+  parameter;
+  para;
+  constructor(public navCtrl: NavController, public navParams: NavParams, private jsonProvider: JsonProvider, public common: CommonProvider, public network: Network) {
+    this.parameter = navParams.get('param');
+    this.getdata();
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad BlogDetailPage');
   }
 
+  getdata() {
+    this.common.presentLoading();
+    this.para = this.parameter + 1;
+    this.jsonProvider.getJsonBlog()
+      .map(data => data.data)
+      .subscribe(
+        data => {
+          this.newsData = data.filter(item => item.postid === this.para + "");
+          this.common.closeLoading();
+          console.log("Success : " + this.newsData);
+        },
+        err => {
+          this.common.closeLoading();
+          console.error("Error : " + err);
+        }//,
+        // () => {
+        //   this.common.closeLoading();
+        //   console.log('getData completed');
+        // }
+      );
+  }
+
+  openPage(url) {
+    console.log(url);
+    
+    if (this.network.type !== 'none') {
+      this.common.openpage(url);
+    } else {
+      this.common.presentToast("Please check your network connection!!!", "top")
+    }
+  }
 }

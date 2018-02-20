@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
 
-let apiUrl = 'http://appadmin.samroid.com/apis/fattofit/';
+let apiUrl = 'http://www.example.com/apis/';
 
 @Injectable()
 export class RestfulServicesProvider {
