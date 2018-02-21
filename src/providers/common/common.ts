@@ -44,7 +44,7 @@ export class CommonProvider {
     toast.present();
   }
 
-  openpage(url) {
+  openpage(url, title) {
     const options: ThemeableBrowserOptions = {
       statusbar: {
         color: '#7c4dff'
@@ -55,7 +55,8 @@ export class CommonProvider {
       },
       title: {
         color: '#ffffff',
-        showPageTitle: true
+        // showPageTitle: true
+        staticText: title
       },
       backButton: {
         image: 'back',

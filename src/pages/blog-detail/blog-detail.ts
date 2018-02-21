@@ -15,6 +15,8 @@ export class BlogDetailPage {
   para;
   postlink;
   postimage;
+  fromtitle;
+  linktitle;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private jsonProvider: JsonProvider, public common: CommonProvider, public network: Network) {
     this.parameter = navParams.get('param');
@@ -33,10 +35,11 @@ export class BlogDetailPage {
       .subscribe(
         data => {
           this.newsData = data.filter(item => item.postid === this.para + "");
-          this.postlink= this.newsData[0].postlink;
-          this.postimage= this.newsData[0].postimage;
+          this.postlink = this.newsData[0].postlink;
+          this.linktitle = this.newsData[0].linktitle;
+          this.postimage = this.newsData[0].postimage;
           console.log(this.postlink);
-          
+
           this.common.closeLoading();
           console.log("Success : " + this.newsData);
         },
@@ -51,11 +54,12 @@ export class BlogDetailPage {
       );
   }
 
-  openPage(url) {
+  openPage(url, title) {
+    this.fromtitle = "From " + title;
     console.log(url);
-    
+    console.log(this.fromtitle);
     if (this.network.type !== 'none') {
-      this.common.openpage(url);
+      this.common.openpage(url, this.fromtitle);
     } else {
       this.common.presentToast("Please check your network connection!!!", "top")
     }
