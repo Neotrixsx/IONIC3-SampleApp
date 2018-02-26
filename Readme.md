@@ -12,8 +12,11 @@ For more information, see <https://docs.google.com/document/d/1iNrh2i0BYk7XMbFz6
 4. `ionic cordova build android`
 5. Connect your Android device and run the application with `ionic cordova run android` (make sure USB debugging is enabled on your device)
 
-## Experiment 1
+## Experiment [Blog]
 
-## Experiment 2
+## Experiment [Read and Send SMS]
 
-## Experiment 3
+## Experiment [Use Detail]
+
+>Android Permissions
+>Device Accounts
