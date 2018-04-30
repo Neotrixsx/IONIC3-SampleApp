@@ -88,5 +88,10 @@
     <plugin name="cordova-plugin-themeablebrowser" spec="^0.2.17" />
     <plugin name="cordova-plugin-native-spinner" spec="^1.1.3" />
     <plugin name="cordova-plugin-android-permissions" spec="^1.0.0" />
-    <plugin name="com.danielsogl.cordova.deviceaccounts" spec="https://github.com/danielsogl/cordova-device-accounts.git" />
+    <plugin name="cordova-plugin-googlemaps" spec="^2.2.5">
+        <variable name="API_KEY_FOR_ANDROID" value="AIzaSyDohNfyrr7F6-OwgIFxSfhduW0e-p7Gytw" />
+        <variable name="API_KEY_FOR_IOS" value="" />
+        <variable name="PLAY_SERVICES_VERSION" value="11.8.0" />
+        <variable name="ANDROID_SUPPORT_V4_VERSION" value="24.1.0" />
+    </plugin>
 </widget>

@@ -1,4 +1,4 @@
-import { DeviceAccounts } from '@ionic-native/device-accounts';
+// import { DeviceAccounts } from '@ionic-native/device-accounts';
 import { AndroidPermissions } from '@ionic-native/android-permissions';
 import { CommonProvider } from './../providers/common/common';
 import { Network } from '@ionic-native/network';
@@ -14,7 +14,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
   rootPage: any = "HomePage";
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public network: Network, public common: CommonProvider, private androidPermissions: AndroidPermissions, private deviceAccounts: DeviceAccounts) {
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public network: Network, public common: CommonProvider, private androidPermissions: AndroidPermissions) {
     platform.ready().then((readySource) => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
@@ -34,9 +34,9 @@ export class MyApp {
         this.androidPermissions.checkPermission(this.androidPermissions.PERMISSION.GET_ACCOUNTS).then(
           result => {
             console.log('Has permission?', result.hasPermission)
-            this.deviceAccounts.get()
-              .then(accounts => console.log(accounts))
-              .catch(error => console.error(error));
+            // this.deviceAccounts.get()
+            //   .then(accounts => console.log(accounts))
+            //   .catch(error => console.error(error));
           },
           err => this.androidPermissions.requestPermission(this.androidPermissions.PERMISSION.GET_ACCOUNTS)
         );

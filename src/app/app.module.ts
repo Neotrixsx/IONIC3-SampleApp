@@ -11,7 +11,7 @@ import { IonicStorageModule } from '@ionic/storage';
 import { Network } from '@ionic-native/network';
 import { ThemeableBrowser } from '@ionic-native/themeable-browser';
 import { SpinnerDialog } from '@ionic-native/spinner-dialog';
-import { DeviceAccounts } from '@ionic-native/device-accounts';
+// import { DeviceAccounts } from '@ionic-native/device-accounts';
 import { AndroidPermissions } from '@ionic-native/android-permissions';
 
 import { MyApp } from './app.component';
@@ -44,7 +44,7 @@ import { RestfulServicesProvider } from '../providers/restful-services/restful-s
     Network,
     ThemeableBrowser,
     SpinnerDialog,
-    DeviceAccounts,
+    // DeviceAccounts,
     AndroidPermissions,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     CommonProvider,
